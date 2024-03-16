@@ -1,0 +1,62 @@
+.container{
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+li{
+    list-style: none;
+    
+
+}
+
+a{
+    text-decoration: none;
+    color: #000000;
+   font-size: 16px;
+}
+nav{
+    display: flex;
+    gap: 50px;
+}
+.image-info{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.man{
+    width: 30px;
+    height: 30px;
+}
+.corzina{
+    width: 30px;
+    height: 30px;
+}
+.search{
+    width: 30px;
+    height: 25px;
+}
+.heart{
+    width: 25px;
+    height: 25px;
+}
+.select{
+    width: 70px;
+    height: 40px;
+   padding: 10px 15px 10px 10px;
+ border: none;
+   font-size: 15px;
+}
+.option{
+    width: 40px;
+    font-size: 17px;
+    height: 30px;
+    border: 1px solid black;
+}
