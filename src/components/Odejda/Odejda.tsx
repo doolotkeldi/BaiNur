@@ -2,7 +2,7 @@ import React from 'react'
 import Woman from '../../assets/svg/Rectangle 5.svg'
 import './Odejda.css'
 import heart from '../../assets/svg/favorites1.svg'
-
+// ll 
 
 
 function Odejda() {
