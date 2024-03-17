@@ -1,0 +1,20 @@
+.threeInfo{
+/* display: flex; */
+margin-top: 50px;
+width: 1200px;
+display: flex;
+justify-content: space-between;
+}
+
+footer{
+    margin: 0;
+}
+.categoryFoot{
+    width: 150px;
+}
+.mediaGroup{
+    width: 300px;
+}
+.delivery{
+    width: 300px;
+}

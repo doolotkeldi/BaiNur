@@ -1,10 +1,14 @@
-import React from 'react'
+import Glavnaya from '../svg/Glavnaya.svg'
+import "./Home.css"
+
 
 function Home() {
   return (
-    <div>
-      
-    </div>
+    <section>
+      <div className='wrapper'>
+        <h1 >Главная</h1>
+      </div>  
+    </section>
   )
 }
 

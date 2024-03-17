@@ -2,16 +2,15 @@ h1{
     font-size: 30px;
     font-weight: 500;
 
-
 }
 .wrapper{
-    width: 1440px;
-    height: 250px;
+    background: url(../svg/Glavnaya.svg) no-repeat center/cover;
+    width: 100%;
+    height: 359px;
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
-    margin: 0 auto;
+    
 }
 .wrapper>img{
     position: absolute;
