@@ -4,7 +4,8 @@ import {
   FaWhatsapp,
   FaTelegram,
   FaEnvelope,
-} from "react-icons/fa";
+} 
+from "react-icons/fa";
 import Logo from "../svg/BAINUR.svg";
 import "./Footer.css";
 
