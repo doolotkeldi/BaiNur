@@ -1,14 +1,17 @@
-import Glavnaya from '../svg/Glavnaya.svg'
-import "./Home.css"
 
+import React from 'react'
+import SectionONe from '../SectionOne/SectionONe'
+import Odejda from '../Odejda/Odejda'
 
 function Home() {
   return (
-    <section>
-      <div className='wrapper'>
-        <h1 >Главная</h1>
-      </div>  
-    </section>
+    <div>
+    
+         <SectionONe/>
+        <Odejda/>
+      
+    </div>
+
   )
 }
 
