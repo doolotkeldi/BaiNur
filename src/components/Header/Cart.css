@@ -1,0 +1,26 @@
+.basket{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 2rem;
+    width: 11rem;
+}
+.basket span{
+    font-size: 30px;
+}
+.leadCart{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1200px;
+}
+.total{
+    font-weight: 700;
+    font-size: 30px;
+}
+.card{
+    border: 1px solid grey;
+    width: 864px;
+    height: 343px;
+    border-radius: 20px;
+}
