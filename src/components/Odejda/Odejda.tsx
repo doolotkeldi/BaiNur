@@ -1,10 +1,11 @@
 
 import React, { useState } from 'react';
-import Woman from '../../assets/svg/Rectangle 5.svg';
+import Woman from '../svg/5.svg';
+
 import './Odejda.css';
-import heart from '../../assets/svg/favorites1.svg';
-import a from '../../assets/svg/a.svg';
-import b from '../../assets/svg/b.svg';
+import heart from '../svg/favorites1.svg';
+import a from '../svg/a.svg';
+import b from '../svg/b.svg';
 import { Transition } from 'react-transition-group';
 
 function Odejda() {

@@ -1,16 +1,16 @@
-import React from 'react'
-import './SectionOne.css'
-import Glavnaya from '../../assets/svg/Glavnaya.svg'
+// import React from 'react'
 
-function SectionONe() {
-  return (
-    <section>
-      <div className='wrapper'>
-        <h1>Главная</h1>
-        <img src={Glavnaya} alt="" />
-      </div>
-    </section>
-  )
-}
+// import Glavnaya from '../../assets/svg/Glavnaya.svg'
 
-export default SectionONe
+// function SectionONe() {
+//   return (
+//     <section>
+//       <div className='wrapper'>
+//         <h1>Главная</h1>
+//         <img src={Glavnaya} alt="" />
+//       </div>
+//     </section>
+//   )
+// }
+
+// export default SectionONe
