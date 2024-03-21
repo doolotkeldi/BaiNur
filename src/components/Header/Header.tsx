@@ -34,7 +34,7 @@ function Header() {
                 <Link to="/children">Для Детей</Link>
               </li>
             </ul>
-            <div className="image-info">
+            <div className="image-info-header">
               <img className="man" src={Man} alt="" />
               <select className="select" name="" id="">
                 <option className="option" value="">

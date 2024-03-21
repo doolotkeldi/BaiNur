@@ -30,7 +30,7 @@ nav{
     display: flex;
     gap: 50px;
 }
-.image-info {
+.image-info-header {
   display: flex;
   align-items: center;
   gap: 15px;
