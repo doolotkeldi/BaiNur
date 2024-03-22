@@ -60,7 +60,7 @@ a{
 }
 .text-info>h1{
     margin: 0;
-    font-size: 28px;
+    font-size: 25px;
     font-weight: 800;
 }
 .text-info>p{
@@ -84,10 +84,7 @@ a{
 
 }
 .image-container{
-    /* display: flex; */
-    /* flex-wrap: wrap; */
-    /* justify-content: space-between; */
-    /* margin-top: 3%; */
+    
     display: grid;
     grid-template-columns: repeat(4,1fr);
     grid-gap: 40px;

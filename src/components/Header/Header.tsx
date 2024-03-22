@@ -35,7 +35,9 @@ function Header() {
               </li>
             </ul>
             <div className="image-info-header">
-              <img className="man" src={Man} alt="" />
+              <Link to="/Registration">
+                <img className="man" src={Man} alt="" />
+              </Link>
               <select className="select" name="" id="">
                 <option className="option" value="">
                   Ru
