@@ -60,7 +60,7 @@ a{
 }
 .text-info>h1{
     margin: 0;
-    font-size: 28px;
+    font-size: 25px;
     font-weight: 800;
 }
 .text-info>p{
@@ -209,3 +209,20 @@ a{
     /* gap: 0px; */
 }
 
+
+.image-block:hover{
+    transform: scale(1.05);
+}
+.image-info{
+    height: 260px;
+    width: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.image-info>img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+}

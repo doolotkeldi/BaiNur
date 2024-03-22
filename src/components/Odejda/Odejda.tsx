@@ -1,28 +1,55 @@
-
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Woman from '../svg/5.svg';
-
 import './Odejda.css';
 import heart from '../svg/favorites1.svg';
 import a from '../svg/a.svg';
 import b from '../svg/b.svg';
 import { Transition } from 'react-transition-group';
+import c from '../svg/c.svg';
+import {pushData} from '../data'
+
+
 
 function Odejda() {
     const [btnImg, setBtnImg] = useState(a);
     const [filterImage, setFilterImage] = useState(false);
+    const [juzik, setJUzik] = useState(heart);
+    const [DataArray, setDataArray] = useState([]);
+
+    useEffect(() => {
+        fetchData();
+    }, []);
+
+    const fetchData = async () => {
+        try {
+            const res = await fetch("https://65c9eb603b05d29307df430a.mockapi.io/api/shop/Clothes");
+            const data = await res.json();
+         
+            setDataArray(data);
+     
+        
+        } catch (error) {
+            console.error("Error fetching data:", error);
+        }
+    };
+    const dataCorzina = (data)=>{
+        if(data){
+            pushData.push(data)
+            console.log(pushData)
+        }
+       }
+       console.log(pushData)
 
     const positionclick = () => {
         setBtnImg(btnImg === a ? b : a);
-        setFilterImage(!filterImage)
+        setFilterImage(!filterImage);
     };
 
     return (
         <section>
             <div className="container odejda-content">
-            <button onClick={positionclick}>Фильт <img className='button-image' src={btnImg} alt="" /></button>
+                <button onClick={positionclick}>Фильт <img className='button-image' src={btnImg} alt="" /></button>
 
-              
                 <Transition in={filterImage} timeout={1000} mountOnEnter unmountOnExit>
                     {state => (
                         <div className={`filter-position ${state}`}>
@@ -69,7 +96,6 @@ function Odejda() {
                         </div>
                     )}
                 </Transition>
-                
 
                 <div className="text-info-filter">
                     <span style={{ display: "flex" }}>
@@ -83,30 +109,28 @@ function Odejda() {
                 </div>
 
                 <div className="image-container container">
-                <div className="image-block">
-    <div className="image-heart">
-    <img className='heart' src={heart} alt="" />
-    </div>
-    <div className="image-info">
-        <img style={{width:"100%",height:"100%"}} src={Woman} alt="" />
-    </div>
-    <div className="text-info">
-
-    <h1>Женское Платье</h1>
-    <p style={{width:"75%"}}>Nike Sportswear Club+ 
-    Button-Down 
-    Short-Sleeve Gömlek</p>
-    <h5> 71$</h5>
-    <button>Добавить в корзину</button>
-    </div>
-
-    </div>
-            </div>
+                    {
+                    DataArray.map((item,index) => (
+                        <div key={index} className="image-block">
+                            <div className="image-heart">
+                                <img onClick={() => setJUzik(juzik === heart ? c : heart)} className='heart' src={juzik} alt="" />
+                            </div>
+                            <div className="image-info">
+                                <img style={{ width: "100%", height: "100%" }} src={item.images} alt="" />
+                            </div>
+                            <div className="text-info">
+                                <h1> {item.name}</h1>
+                                <p style={{ width: "75%" }}>{item.kategory}</p>
+                                <h5> {item.price}$</h5>
+                                <button onClick={()=>dataCorzina(item)}>Добавить в корзину</button>
+                            </div>
+                        </div>
+                    ))
+                    }
+                </div>
             </div>
         </section>
-    )
-
+    );
 }
 
 export default Odejda;
-
