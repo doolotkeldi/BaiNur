@@ -23,7 +23,7 @@ function Cart() {
   
     <section className="container cart-container">
       {
-        pushData.map((item,index)=>(
+        pushData.map((item)=>(
           <div key={item.id} className="headerOfCart">
         <div className="leadCart">
           <div className="basket">
