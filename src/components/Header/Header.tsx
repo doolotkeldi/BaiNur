@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import corzina from "../svg/basket.svg";
 import heart from "../svg/favorites1.svg";
@@ -6,9 +6,12 @@ import Man from "../svg/user.svg";
 import Search from "../svg/Vector.svg";
 import BaiNur from "../svg/BAINUR.svg";
 import Cart from "./Cart";
+import { pushData } from "../data";
 import "./Header.css";
 
 function Header() {
+  const [data,setData] = useState(pushData)
+
   return (
     <>
       <header>
@@ -24,6 +27,7 @@ function Header() {
               <li>
                 <Link to="/about">О нас</Link>
               </li>
+          
               <li>
                 <Link to="/formen">Для Мужчин</Link>
               </li>
@@ -43,7 +47,8 @@ function Header() {
                   Ru
                 </option>
               </select>
-              <Link to="/cart">
+              <Link className="cart" to="/cart">
+                <span className="">{data.length}</span>
                 <img className="corzina" src={corzina} alt="" />
               </Link>
               <img className="search" src={Search} alt="" />

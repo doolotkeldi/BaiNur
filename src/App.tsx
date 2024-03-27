@@ -1,18 +1,17 @@
-import React from 'react'
-import { Route, Routes } from 'react-router-dom'
-import Layout from './components/Layout/Layout'
-import Home from './pages/HomePage'
-import Contact from './components/Contact/Contact'
-import Header from './components/Header/Header'
-import Footer from './components/Footer/Footer'
-import About from './components/About/About'
-import Cart from './components/Header/Cart'
-import Registration from "./components/registration/Redistartion"
+import React, { useEffect, useState } from 'react';
+import { Route, Routes } from 'react-router-dom';
+import Layout from './components/Layout/Layout';
+import Home from './pages/HomePage';
+import Contact from './components/Contact/Contact';
 
-
+import About from './components/About/About';
+import Cart from './components/Header/Cart';
+import Registration from "./components/registration/Redistartion";
 
 
 function App() {
+
+
   return (
     <div>
       {/* <Header/> */}
@@ -23,12 +22,13 @@ function App() {
           <Route path='/about' element={<About/>}/>
           <Route path="/cart" element={<Cart/>}/>
           <Route path='/registration' element={<Registration/>}/>
+ 
+        
         </Route>
       </Routes>
-      {/* <Footer/> */}
+
     </div>
-  )
+  );
 }
 
-export default App
-    
+export default App;
