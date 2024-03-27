@@ -11,15 +11,17 @@ function Odejda() {
   const [btnImg, setBtnImg] = useState(a);
   const [filterImage, setFilterImage] = useState(false);
   const [API, setAPI] = useState([]);
-  const [selectedCategory, setSelectedCategory] = useState("");
-
+  const [selectedCategory, setSelectedCategory] = useState(""); 
+  
   useEffect(() => {
+    const API =  "https://65c9eb603b05d29307df430a.mockapi.io/api/shop/Clothes"
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          "https://65c9eb603b05d29307df430a.mockapi.io/api/shop/Clothes"
+         API
         );
         setAPI(response.data);
+        
       } catch (error) {
         console.error("Error fetching data:", error);
       }
@@ -41,7 +43,9 @@ function Odejda() {
       alert("Ваш продукт уже в корзине");
     }
   };
-
+  API.forEach(obj => {
+    obj.dobav_completed = false;
+  });
   const filterProductsByCategory = (category) => {
     setSelectedCategory(category);
   };
@@ -141,3 +145,6 @@ function Odejda() {
 }
 
 export default Odejda;
+
+
+
